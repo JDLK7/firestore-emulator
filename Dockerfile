@@ -1,6 +1,4 @@
-ARG GCLOUD_SDK_VERSION=234.0.0-alpine
-
-FROM google/cloud-sdk:$GCLOUD_SDK_VERSION
+FROM google/cloud-sdk:alpine
 
 RUN apk add --update --no-cache openjdk8-jre &&\
 	gcloud components install cloud-firestore-emulator beta --quiet
